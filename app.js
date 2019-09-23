@@ -8,14 +8,14 @@ var endpoint = "brewery/:breweryId/locations";
 var map;
  function createMap(){
      var options = {
-         center: {lat: 39.74, lng: 104.99},
+         center: {lat: 39.74, lng: -104.99},
          zoom: 8
      };
      map = new google.maps.Map(document.getElementById("map"), options);
     //  $("#map").append(map)
      console.log(map)
-     createMap()
-     infoWindow = new google.maps.infoWindow;
+    //  createMap()
+     infoWindow = new google.maps.InfoWindow;
      if (navigator.geolocation) {
          navigator.geolocation.getCurrentPosition(function (p) {
              var position = {
@@ -26,10 +26,10 @@ var map;
              infoWindow.setContent("Your location");
              infoWindow.open(map);
         }, function () {
-            handleLocationError("Geolocation service failed", map.center());
+            handleLocationError("Geolocation service failed", map.center);
         })
      } else {
-        handleLocationError("No geolocation available", map.center());
+        handleLocationError("No geolocation available", map.center);
      }
      }
      function handleLocationError (content, position) {
