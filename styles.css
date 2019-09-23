@@ -21,7 +21,6 @@ p{
     width: 120px;
     padding: 50px;
     font-size: 15px;
-    /* color: black; */
     text-align: center;
     background-image: url("images/thumbnail.jpg");
 }
@@ -54,7 +53,21 @@ span {
     color: white;
 }
 
+/* beer styles css */
+.card {
+        border-radius: 5px;
+        width: 50%;
+        margin: auto;
+        float: none;
+        margin-top: 30px;
+}
 
+/* map page css */
+#map .title {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background: blue;
+}
 
 
 
