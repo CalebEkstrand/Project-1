@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+#map .title {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background: blue;
+=======
 body {
     background-image: url("images/bartop.jpg");
     background-repeat: no-repeat;
@@ -31,6 +37,7 @@ span {
     display: inline-block;
     text-align: center;
     color:antiquewhite;
+>>>>>>> 4bc9d54e52fb3f5797a47c5693f9caecddb155e5
 }
 
 #images {
