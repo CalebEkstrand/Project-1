@@ -1,9 +1,24 @@
-<<<<<<< HEAD
 #map .title {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    background: blue;
-=======
+    color: white;
+}
+
+#map .side-p {
+    position: absolute;
+    margin-top: 100px;
+    width: 100px;
+    height: 400px;
+    padding-left: 200px;
+    background-color: cyan;
+    
+} 
+
+#map .spanc{ 
+    color: black;
+    padding-right: 150px
+}
+
 body {
     background-image: url("images/bartop.jpg");
     background-repeat: no-repeat;
@@ -26,18 +41,17 @@ p{
     bottom: 20px;
     width: 120px;
     padding: 50px;
-    font-size: 15px;
-    /* color: black; */
-    text-align: center;
+    font-size: 15px; 
+     color: black; 
+     text-align: center;
     background-image: url("images/thumbnail.jpg");
-}
+} 
 span {
     position: relative;
     margin-right: 60px;
     display: inline-block;
     text-align: center;
     color:antiquewhite;
->>>>>>> 4bc9d54e52fb3f5797a47c5693f9caecddb155e5
 }
 
 #images {
