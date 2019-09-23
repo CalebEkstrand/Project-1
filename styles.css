@@ -1,10 +1,7 @@
-body {
-    background-image: url("images/bartop.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 550px;
-
+#map .title {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background: blue;
 }
 
 
