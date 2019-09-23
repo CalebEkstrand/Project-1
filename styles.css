@@ -37,8 +37,21 @@ span {
     width: 500px;
 }
 
-/* nav bar css */
+#map {
+        height: 100%;
+        /* width: 80%;
+        text-align: center; */
+      }
+      html, body {
+        height: 100%;
+        /* width: 100%; */
+        margin: 0;
+        padding: 0;
+      }
 
+.display {
+    color: white;
+}
 
 /* beer styles css */
 .card {
