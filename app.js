@@ -54,14 +54,19 @@ function handleLocationError(content, position) {
 
 // var database = firebase.database();
 
+var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
+
 $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
     //Grabbing user input values
-    valueTrain = $("#name-input").val().trim();
-    valueDestination = $("#destination-input").val().trim();
-    valueFirst = $("#first-input").val().trim();
-    valueFrequency = $("#frequency-input").val().trim();
+
+    $.ajax({
+        URL: queryURL,
+        method: "GET"
+    }).then(function(response) {
+
+    })
 
 
 
@@ -105,7 +110,13 @@ $("#btn").on("click", function (event) {
 
     });
 });
+// window.onload = function() {
+//     document.getElementById("#my_audio").play();
+//  }
 
+ $(document).ready(function() {
+    $("#my_audio").get(0).play();
+ });
     //  createMap()
 
 
