@@ -1,5 +1,5 @@
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
-// // var queryURLbrewery = `http://api.brewerydb.com/v2/${endpoint}/?key=94780a63bf05dcb19f858d5285c41fbb`
+var queryURLbrewery = `https://api.brewerydb.com/v2/${endpoint}/?key=94780a63bf05dcb19f858d5285c41fbb`
 var firebaseConfig = {
     apiKey: "AIzaSyAPPCVJIU212WdBYfANzZW1NJnpAA1NNMk",
     authDomain: "beertastic-e3433.firebaseapp.com",
@@ -54,62 +54,68 @@ function handleLocationError(content, position) {
 
 // var database = firebase.database();
 
-var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
+// var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
+var queryURLbrewery = `https://cors-anywhere.herokuapp.com//https://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb`
+
+jQuery.ajaxPrefilter(function(options) {
 
 $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
-    //Grabbing user input values
+
 
     $.ajax({
-        URL: queryURL,
-        method: "GET"
-    }).then(function (response) {
+    URL: queryURLbrewery,
+    method: "GET",
+}).then(function (data) {
+    // brewLoc(response);
+    console.log(data.URL)
+    console.log(data);
+})
 
-    })
-
-
-
-
-    var places = searchBox.getPlaces();
-    var input = document.getElementById("search");
-    var searchBox = new google.map.places.searchBox(input);
-
-    map.addListener("bounds_changed", function () {
-        searchBox.setBounds(map.getBounds());
-    });
-
-    var markers = [];
-    searchBox.addListener("places_changed", function () {
+        
+        
+        
         var places = searchBox.getPlaces();
-
-        if (places.length = 0)
-            return;
-
-        markers.forEach(function (m) { m.setMap(null); });
-        markers = [];
-
-        var bounds = new google.maps.LatLngBounds();
-        places.forEach(function (p) {
-            if (!p.geometry)
-                return;
-
-            markers.push(new google.maps.Marker({
-                map: map,
-                title: p.name,
-                position: p.geometry.location
-            }));
-
-            if (p.geometry.viewport)
-                bounds.union(p.geometry.viewport);
-            else
-                bounds.extend(p.geometry.location);
+        var input = document.getElementById("search");
+        var searchBox = new google.map.places.SearchBox(input);
+        
+        map.addListener("bounds_changed", function () {
+            searchBox.setBounds(map.getBounds());
         });
-        map.fitBounds(bounds);
-
-
+        
+        var markers = [];
+        searchBox.addListener("places_changed", function () {
+            var places = searchBox.getPlaces();
+            
+            if (places.length = 0)
+            return;
+            
+            markers.forEach(function (m) { m.setMap(null); });
+            markers = [];
+            
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function (p) {
+                if (!p.geometry)
+                return;
+                
+                markers.push(new google.maps.Marker({
+                    map: map,
+                    title: p.name,
+                    position: p.geometry.location
+                }));
+                
+                if (p.geometry.viewport)
+                bounds.union(p.geometry.viewport);
+                else
+                bounds.extend(p.geometry.location);
+            });
+            map.fitBounds(bounds);
+            
+            
+        });
     });
-});
+        
 // window.onload = function() {
 //     document.getElementById("#my_audio").play();
 //  }
@@ -131,4 +137,4 @@ $("#btn").on("click", function (event) {
 //         method: "GET"
 //     }).then(function(response){
 //     })
-//     console.log("Click")})}
+//     console.log("Click"
