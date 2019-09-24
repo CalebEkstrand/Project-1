@@ -110,13 +110,6 @@ $("#btn").on("click", function (event) {
 
     });
 });
-// window.onload = function() {
-//     document.getElementById("#my_audio").play();
-//  }
-
- $(document).ready(function() {
-    $("#my_audio").get(0).play();
- });
     //  createMap()
 
 
