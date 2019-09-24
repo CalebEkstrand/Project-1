@@ -13,7 +13,7 @@ body {
     padding: 25px;
 } 
 
-p{
+.span{
     position: absolute;
     border-radius: 8px;
     margin-left: 190px;
@@ -42,11 +42,33 @@ span {
 .card {
         border-radius: 5px;
         width: 50%;
-        margin: auto;
+        margin-left: 50px;
         float: none;
         margin-top: 30px;
 }
 
+.dropdown-menu:hover {
+    color: #fff;
+    background-color: lightgray;
+}
+
+.searchCard {
+    float: right;
+    color: #fff;
+}
+
+
+/* map page css */
+
+#map {
+    height: 80%;
+    width: 40%;
+  }
+
+.display {
+width: 30%;
+color: white;
+}
 
 
 
