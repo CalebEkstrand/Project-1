@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+    <title>Beer Styles</title>
 </head>
 
 <body>
@@ -23,7 +23,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <title>Brewery Specific</title>
     </head>
 
     <body>
@@ -32,24 +31,42 @@
             <a class="navbar-brand" href="location_type.html">Brewery Type</a>
             <a class="navbar-brand" href="map.html">Map</a>
         </nav>
-    
+
         <div class="card col-md-6">
-                    <table class="table table-sm table-hover" id='beer-table'>
-                        <thead>
-                            <tr>
-                                <th scope="col">Brewery Name</th>
-                                <th scope="col">Location</th>
-                                <th scope="col">Beer Style</th>
-                            </tr>
-                        </thead>
-                    </table>
+            <table class="table table-sm table-hover" id='beer-table'>
+                <thead>
+                    <tr>
+                        <th scope="col">Brewery Name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Beer Style</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div class="searchCard" class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Find Your Beer Here!</h5>
+                <p class="card-text">Search for specific styles of beer based off where you are and surrounding areas.</p>
+                <div class="dropdown show">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Search Radius
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">5 Miles</a>
+                        <a class="dropdown-item" href="#">10 Miles</a>
+                        <a class="dropdown-item" href="#">25 Miles</a>
+                    </div>
                 </div>
             </div>
-      
+        </div>
+
 
         <script rel="javascript" type="text/javascript" src="app.js"></script>
         <audio autoplay>
-                <source id="my_audio" src="images/barNoise.mp3" type="audio/mpeg" loop="loop">
+            <source id="my_audio" src="images/barNoise.mp3" type="audio/mpeg" loop="loop">
         </audio>
     </body>
 

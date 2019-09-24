@@ -73,6 +73,8 @@ $("#btn").on("click", function (event) {
     }).then(function(response) {
 brewLoc(response);
 console.log(response)
+=======
+    }).then(function (response) {
     })
 
 
@@ -117,7 +119,14 @@ console.log(response)
 
     });
 });
-    //  createMap()
+// window.onload = function() {
+//     document.getElementById("#my_audio").play();
+//  }
+
+//  $(document).ready(function() {
+//     $("#my_audio").get(0).play();
+//  });
+//     //  createMap()
 
 
 // $("#brew-type-loc").on("click", function(event){
