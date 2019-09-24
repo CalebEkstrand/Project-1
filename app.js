@@ -105,7 +105,6 @@ $("#btn").on("click", function (event) {
 
     });
 });
-
     //  createMap()
 
 

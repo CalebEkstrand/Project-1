@@ -37,21 +37,6 @@ span {
     width: 500px;
 }
 
-#map {
-        height: 100%;
-        /* width: 80%;
-        text-align: center; */
-      }
-      html, body {
-        height: 100%;
-        /* width: 100%; */
-        margin: 0;
-        padding: 0;
-      }
-
-.display {
-    color: white;
-}
 
 /* beer styles css */
 .card {
@@ -62,12 +47,7 @@ span {
         margin-top: 30px;
 }
 
-/* map page css */
-#map .title {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    background: blue;
-}
+
 
 
 
