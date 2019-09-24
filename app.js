@@ -1,5 +1,7 @@
+var locality = `/locations`;
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
-// // var queryURLbrewery = `http://api.brewerydb.com/v2/${endpoint}/?key=94780a63bf05dcb19f858d5285c41fbb`
+var queryURLbrewery = `http://api.brewerydb.com/v2/${locality}/?key=94780a63bf05dcb19f858d5285c41fbb`
+console.log(queryURLbrewery)
 var firebaseConfig = {
     apiKey: "AIzaSyAPPCVJIU212WdBYfANzZW1NJnpAA1NNMk",
     authDomain: "beertastic-e3433.firebaseapp.com",
@@ -16,7 +18,6 @@ var database = firebase.database();
 
 var breweryTypeLoc = `/brewery/:breweryId/locations`;
 var beerByBrewery = `/beer/:beerId/breweries`;
-var locality = `/locations`;
 var endpoint = "brewery/:breweryId/locations";
 var map;
 function createMap() {
@@ -62,10 +63,11 @@ $("#btn").on("click", function (event) {
     //Grabbing user input values
 
     $.ajax({
-        URL: queryURL,
+        URL: queryURLbrewery,
         method: "GET"
     }).then(function(response) {
-
+brewLoc(response);
+console.log(response)
     })
 
 
@@ -125,3 +127,8 @@ $("#btn").on("click", function (event) {
 //     }).then(function(response){
 //     })
 //     console.log("Click")})}
+
+function brewLoc(){
+var locations = [
+    data.longitude ,  ""
+]}
