@@ -1,5 +1,7 @@
+var locality = `/locations`;
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
-// // var queryURLbrewery = `http://api.brewerydb.com/v2/${endpoint}/?key=94780a63bf05dcb19f858d5285c41fbb`
+var queryURLbrewery = `http://api.brewerydb.com/v2/${locality}/?key=94780a63bf05dcb19f858d5285c41fbb`
+console.log(queryURLbrewery)
 var firebaseConfig = {
     apiKey: "AIzaSyAPPCVJIU212WdBYfANzZW1NJnpAA1NNMk",
     authDomain: "beertastic-e3433.firebaseapp.com",
@@ -16,7 +18,6 @@ var database = firebase.database();
 
 var breweryTypeLoc = `/brewery/:breweryId/locations`;
 var beerByBrewery = `/beer/:beerId/breweries`;
-var locality = `/locations`;
 var endpoint = "brewery/:breweryId/locations";
 var map;
 function createMap() {
@@ -56,16 +57,24 @@ function handleLocationError(content, position) {
 
 var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 
+function brewLoc(){
+var locations = [
+    data.longitude ,  ""
+]}
+
 $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
     //Grabbing user input values
-
+// var container = document.getElementById("search");
     $.ajax({
-        URL: queryURL,
+        URL: queryURLbrewery,
         method: "GET"
     }).then(function(response) {
-
+brewLoc(response);
+console.log(response)
+=======
+    }).then(function (response) {
     })
 
 
@@ -111,6 +120,7 @@ $("#btn").on("click", function (event) {
     });
 });
 
+
 var tabs = $('.tabs');
 var selector = $('.tabs').find('a').length;
 var selector = $(".tabs").find(".selector");
@@ -137,7 +147,7 @@ $(".tabs").on("click","a",function(e){
 
   },500);
 });
-    //  createMap()
+
 
 
 // $("#brew-type-loc").on("click", function(event){
@@ -152,3 +162,4 @@ $(".tabs").on("click","a",function(e){
 //     }).then(function(response){
 //     })
 //     console.log("Click")})}
+
