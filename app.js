@@ -57,11 +57,16 @@ function handleLocationError(content, position) {
 
 var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 
+function brewLoc(){
+var locations = [
+    data.longitude ,  ""
+]}
+
 $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
     //Grabbing user input values
-
+// var container = document.getElementById("search");
     $.ajax({
         URL: queryURLbrewery,
         method: "GET"
@@ -128,7 +133,3 @@ console.log(response)
 //     })
 //     console.log("Click")})}
 
-function brewLoc(){
-var locations = [
-    data.longitude ,  ""
-]}
