@@ -1,3 +1,4 @@
+/* INDEX STYLES CSS */
 body {
     background-image: url("images/bartop.jpg");
     background-repeat: no-repeat;
@@ -14,15 +15,16 @@ body {
 } 
 
 .span{
-    position: absolute;
+    position: relative;
     border-radius: 8px;
-    margin-left: 190px;
-    bottom: 20px;
-    width: 120px;
+    margin-left: 187px;
+    margin-top: 90px;
+    width: 122px;
     padding: 50px;
     font-size: 15px;
     text-align: center;
     background-image: url("images/thumbnail.jpg");
+    z-index: 2px;
 }
 span {
     position: relative;
@@ -30,11 +32,24 @@ span {
     display: inline-block;
     text-align: center;
     color:antiquewhite;
+    z-index: 2px;
 }
 
 #images {
+    position: absolute;
     height: 400px;
     width: 500px;
+    z-index: 1px;
+    top: 0;
+}
+
+.caps {
+    margin-top: 10px;
+    /* position: relative; */
+    height: 100px;
+    width: 100px;
+    z-index: 5px;
+    margin-left: 195px;
 }
 
 /* NAV BAR CSS */
