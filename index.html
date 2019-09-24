@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -29,27 +29,34 @@
     <div class="bottles" class="container">
         <div class="row align-items-start">
             <div class="col-sm-3">
+
+                <img id="images" src="images/perfect beer bottle.png" alt="Beer Bottles">
                 <a href="brewery.html">
-                    <img id="images" src="images/perfect beer bottle.png" alt="Beer Bottles"></a>
-                <p><span>Search by Beer</span></p>
+                    <p><span>Search by Beer</span></p>
+                </a>
             </div>
             <div id="by-brew" class="col-sm-3">
+
+                <img id="images" src="images/perfect beer bottle.png" alt="Beer Bottles">
                 <a href="location_type.html">
-                    <img id="images" src="images/perfect beer bottle.png" alt="Beer Bottles"></a>
-                <p><span>Search by Brewery</span></p>
+                    <p><span>Search by Brewery</span></p>
+                </a>
             </div>
             <div id="locality" class="col-sm-3">
+
+                <img id="images" src="images/perfect beer bottle.png" alt="Beer Bottles">
                 <a href="map.html">
-                    <img id="images" src="images/perfect beer bottle.png" alt="Beer Bottles"></a>
-                <p><span>Search by Map</span></p>
+                    <p><span>Search by Map</span></p>
+                </a>
             </div>
         </div>
     </div>
 
+    <audio autoplay>
+        <source id="my_audio" src="images/barNoise.mp3" type="audio/mpeg" loop="loop">
+    </audio>
     
     <script rel="javascript" type="text/javascript" src="app.js"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"></script>
 
 </body>
 

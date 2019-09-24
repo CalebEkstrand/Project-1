@@ -64,7 +64,7 @@ $("#btn").on("click", function (event) {
     $.ajax({
         URL: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
 
     })
 
