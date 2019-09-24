@@ -114,10 +114,10 @@ $("#btn").on("click", function (event) {
 //     document.getElementById("#my_audio").play();
 //  }
 
- $(document).ready(function() {
-    $("#my_audio").get(0).play();
- });
-    //  createMap()
+//  $(document).ready(function() {
+//     $("#my_audio").get(0).play();
+//  });
+//     //  createMap()
 
 
 // $("#brew-type-loc").on("click", function(event){
