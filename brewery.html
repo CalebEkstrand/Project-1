@@ -26,11 +26,14 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="index.html">Home</a>
-            <a class="navbar-brand" href="location_type.html">Brewery Type</a>
-            <a class="navbar-brand" href="map.html">Map</a>
-        </nav>
+        <div class="wrapper">
+            <nav class="tabs">
+                <div class="selector"></div>
+                <a data-href="index.html" href="#"><i class="fas fa-hand-rock"></i>Home</a>
+                <a data-href="location_type.html" href="#"><i class="fas fa-bolt"></i>Brewery Type</a>
+                <a data-href="map.html" href="#"><i class="fas fa-burn"></i>Map</a>
+                </nav>
+        </div>
 
         <div class="card col-md-6">
             <table class="table table-sm table-hover" id='beer-table'>

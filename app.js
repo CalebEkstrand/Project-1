@@ -119,14 +119,35 @@ console.log(response)
 
     });
 });
-// window.onload = function() {
-//     document.getElementById("#my_audio").play();
-//  }
 
-//  $(document).ready(function() {
-//     $("#my_audio").get(0).play();
-//  });
-//     //  createMap()
+
+var tabs = $('.tabs');
+var selector = $('.tabs').find('a').length;
+var selector = $(".tabs").find(".selector");
+var activeItem = tabs.find('.active');
+var activeWidth = activeItem.innerWidth();
+$(".selector").css({
+  "left": activeItem.position.left + "px", 
+  "width": activeWidth + "px"
+});
+
+$(".tabs").on("click","a",function(e){
+  e.preventDefault();
+  $('.tabs a').removeClass("active");
+  $(this).addClass('active');
+  var activeWidth = $(this).innerWidth();
+  var itemPos = $(this).position();
+  $(".selector").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+  });
+  var href = $(this).attr("data-href");
+  setTimeout(function(){ 
+      window.location.href = href;
+
+  },500);
+});
+
 
 
 // $("#brew-type-loc").on("click", function(event){
