@@ -64,7 +64,7 @@ $("#btn").on("click", function (event) {
     $.ajax({
         URL: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
 
     })
 
@@ -110,7 +110,14 @@ $("#btn").on("click", function (event) {
 
     });
 });
-    //  createMap()
+// window.onload = function() {
+//     document.getElementById("#my_audio").play();
+//  }
+
+//  $(document).ready(function() {
+//     $("#my_audio").get(0).play();
+//  });
+//     //  createMap()
 
 
 // $("#brew-type-loc").on("click", function(event){
