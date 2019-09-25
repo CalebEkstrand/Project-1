@@ -1,3 +1,5 @@
+var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`;
+
 // var locality = `/locations`;
 
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
@@ -205,3 +207,9 @@ $("#beer-search-btn").on("click", function () {
 //     })
 //     console.log("Click")})}
 
+     $.ajax({
+         url: brewLoc,
+        method: "GET"
+     }).then(function(response){
+     })
+     console.log("Click")
