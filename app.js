@@ -57,7 +57,7 @@ function handleLocationError(content, position) {
 
 // var database = firebase.database();
 
-var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
+var queryURL = "http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 
 function brewLoc() {
     var locations = [
@@ -68,14 +68,25 @@ function brewLoc() {
 $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
+    var brewerySearch = $("#search").val().trim();
+    console.log(brewerySearch)
     //Grabbing user input values
     // var container = document.getElementById("search");
     $.ajax({
-        URL: queryURLbrewery,
+        URL: queryURL,
         method: "GET"
     }).then(function (response) {
-        brewLoc(response);
-        console.log(response)
+       var data = response.data;
+       for (var i = 0; i < data.length; i++){
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+          });
+
+
+       }
+        console.log(r)
     })
 
 
@@ -130,7 +141,7 @@ $("#beer-search-btn").on("click", function () {
     // var brewMapQueryUrl = `http://cors-anywhere.herokuapp.com/http://beermapping.com/webservice/loccity/1e85b90225089a51575fe3432c04261e/${beerSearch}`
 
 
-    var queryURLbrewery = `http://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb&${beerSearch}`
+    var queryURLbrewery = `http://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb&locality=${beerSearch}`
     $.ajax({
         url: queryURLbrewery,
         method: "GET"
@@ -143,11 +154,13 @@ $("#beer-search-btn").on("click", function () {
                 $("<td>").text(data[i].name),
                 $("<td>").text(data[i].streetAddress),
                 $("<td>").text(data[i].locationTypeDisplay),
-            ))
-
-            }
+            )) //push pin instead of table, another click event, recenter map setCenter(latLng), google method to recenter map to new lat lon
+        }
     })
+    $("tbody").empty();
 })
+
+
 
 
     var tabs = $('.tabs');
