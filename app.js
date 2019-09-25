@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
-// // var queryURLbrewery = `http://api.brewerydb.com/v2/${endpoint}/?key=94780a63bf05dcb19f858d5285c41fbb`
-=======
 // var locality = `/locations`;
 
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
 // var queryURLbrewery = `http://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb`
 // console.log(queryURLbrewery)
->>>>>>> 8082767c57a56017bbdd8c3fd2fe77386e4b9e4e
 var firebaseConfig = {
     apiKey: "AIzaSyAPPCVJIU212WdBYfANzZW1NJnpAA1NNMk",
     authDomain: "beertastic-e3433.firebaseapp.com",
@@ -210,4 +205,4 @@ $("#beer-search-btn").on("click", function () {
         method: "GET"
      }).then(function(response){
      })
-     console.log("Click")})}
+     console.log("Click")})
