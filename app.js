@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`;
+
+>>>>>>> 9cf184432650c9bd47634a8760d5bf1c7a548377
 // var locality = `/locations`;
 
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
@@ -191,14 +196,19 @@ $("#beer-search-btn").on("click", function () {
     });
 
 
-      createMap()
+
+// $("#brew-type-loc").on("click", function(event){
+//     event.preventDefault();
+//     var brewLoc = ("http://api.brewerydb.com/v2/" + endpoint + "/?key=94780a63bf05dcb19f858d5285c41fbb");
 
 
- $("#brew-type-loc").on("click", function(event){
-     event.preventDefault();
-     var brewLoc = ("http://api.brewerydb.com/v2/" + endpoint + "/?key=94780a63bf05dcb19f858d5285c41fbb");
 
-
+//     $.ajax({
+//         url: brewLoc,
+//         method: "GET"
+//     }).then(function(response){
+//     })
+//     console.log("Click")})}
 
      $.ajax({
          url: brewLoc,
@@ -206,3 +216,4 @@ $("#beer-search-btn").on("click", function () {
      }).then(function(response){
      })
      console.log("Click")})
+     console.log("Click")
