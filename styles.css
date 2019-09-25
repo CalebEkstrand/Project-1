@@ -1,30 +1,30 @@
 /* INDEX STYLES CSS */
 body {
-    background-image: url("images/bartop.jpg");
+    background-image: url("images/bartop2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 350px;
 }
 
 .bottles {
-    margin-top: 300px;
+    margin-top: 380px;
     width: 100%;
     height: 350px;
     padding: 25px;
+    margin-left: 255px;
 } 
 
 .span{
     position: relative;
     border-radius: 8px;
-    margin-left: 187px;
-    margin-top: 90px;
-    width: 122px;
-    padding: 50px;
+    margin-left: 149px;
+    margin-top: 40px;
+    width: 98px;
+    padding: 30px;
     font-size: 15px;
     text-align: center;
     background-image: url("images/thumbnail.jpg");
-    z-index: 2px;
 }
 span {
     position: relative;
@@ -32,24 +32,21 @@ span {
     display: inline-block;
     text-align: center;
     color:antiquewhite;
-    z-index: 2px;
 }
 
 #images {
     position: absolute;
-    height: 400px;
-    width: 500px;
-    z-index: 1px;
+    height: 300px;
+    width: 400px;
     top: 0;
 }
 
 .caps {
-    margin-top: 10px;
-    /* position: relative; */
+    top: 0;
+    position: relative;
     height: 100px;
     width: 100px;
-    z-index: 5px;
-    margin-left: 195px;
+    margin-left: 155px;
 }
 
 /* NAV BAR CSS */
@@ -117,7 +114,15 @@ h6{
     background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
   }
-/* BEER STYLES PAGE CSS*/
+/* BREWERY TYPE PAGE CSS*/
+#brew-body {
+    background-image: url("images/bartop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+}
+
 .card {
         border-radius: 5px;
         width: 50%;
@@ -137,7 +142,7 @@ h6{
 }
 
 
-/* map page css */
+/* MAP PAGE CSS */
 
 #map {
     height: 80%;
@@ -146,7 +151,7 @@ h6{
 
 .display {
 width: 30%;
-color: white;
+color: black;
 }
 
 
