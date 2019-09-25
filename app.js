@@ -59,35 +59,32 @@ function handleLocationError(content, position) {
 
 var queryURL = "http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 
-function brewLoc() {
-    var locations = [
-        data.longitude, ""
-    ]
-}
+// function brewLoc() {
+//     var locations = [
+//         data.longitude, ""
+//     ]
+// }
 
 $("#btn").on("click", function (event) {
+    
     event.preventDefault();
     console.log("we clicked it")
     var brewerySearch = $("#search").val().trim();
+    var queryURL = 
     console.log(brewerySearch)
     //Grabbing user input values
     // var container = document.getElementById("search");
     $.ajax({
-        URL: queryURL,
+        url: brewerySearch,
         method: "GET"
     }).then(function (response) {
        var data = response.data;
        for (var i = 0; i < data.length; i++){
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Hello World!'
-          });
+        
+          };
 
 
-       }
-        console.log(r)
-    })
+       })
 
 
 
