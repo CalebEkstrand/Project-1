@@ -1,25 +1,27 @@
+/* INDEX STYLES CSS */
 body {
-    background-image: url("images/bartop.jpg");
+    background-image: url("images/bartop2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 350px;
 }
 
 .bottles {
-    margin-top: 300px;
+    margin-top: 380px;
     width: 100%;
     height: 350px;
     padding: 25px;
+    margin-left: 255px;
 } 
 
-p{
-    position: absolute;
+.span{
+    position: relative;
     border-radius: 8px;
-    margin-left: 190px;
-    bottom: 20px;
-    width: 120px;
-    padding: 50px;
+    margin-left: 149px;
+    margin-top: 40px;
+    width: 98px;
+    padding: 30px;
     font-size: 15px;
     text-align: center;
     background-image: url("images/thumbnail.jpg");
@@ -33,8 +35,10 @@ span {
 }
 
 #images {
-    height: 400px;
-    width: 500px;
+    position: absolute;
+    height: 300px;
+    width: 400px;
+    top: 0;
 }
 
 #googleMap {
@@ -43,18 +47,94 @@ span {
       
       }
      
-
-.display {
-    color: white;
+.caps {
+    top: 0;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-left: 155px;
 }
 
-/* beer styles css */
+/* NAV BAR CSS */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+  text-align:center;
+  margin: 10px auto;
+}
+
+h6{
+    margin:0px;
+    color:#777;
+  }
+
+.tabs{
+  margin-top:10px;
+  font-size:15px;
+  padding:0px;
+  list-style:none;
+  background:#fff;
+  box-shadow:0px 5px 20px rgba(0,0,0,0.1);
+  display:inline-block;
+  border-radius:50px;
+  position:relative;
+}
+
+.tabs a{
+  text-decoration:none;
+  color: #777;
+  text-transform:uppercase;
+  padding:10px 20px;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  transition-duration:0.6s;
+}
+
+.tabs a.active{
+  color:#fff;
+}
+
+.tabs a i{
+  margin-right:5px;
+}
+
+.tabs .selector{
+    height:100%;
+    display:inline-block;
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:1;
+    border-radius:50px;
+    transition-duration:0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    background: #05abe0;
+    background: -moz-linear-gradient(45deg, #05abe0 0%, #8200f4 100%);
+    background: -webkit-linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+    background: linear-gradient(45deg, #05abe0 0%,#8200f4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#8200f4',GradientType=1 );
+  }
+/* BREWERY TYPE PAGE CSS*/
+#brew-body {
+    background-image: url("images/bartop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+}
+
 .card {
         border-radius: 5px;
         width: 50%;
-        margin: auto;
+        margin-left: 50px;
         float: none;
-        margin-top: 30px;
+        margin-top: 100px;
 }
 
 /* map page css */
@@ -69,6 +149,19 @@ span {
     background: white;
     font-size: 55px;
 }
+
+.searchCard {
+    float: right;
+    color: #fff;
+}
+
+
+/* MAP PAGE CSS */
+.display {
+width: 30%;
+color: black;
+}
+
 
 
 
