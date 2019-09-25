@@ -23,6 +23,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     </head>
 
     <body>
@@ -45,6 +47,9 @@
                         <th scope="col">Beer Style</th>
                     </tr>
                 </thead>
+                <tbody>
+                    
+                </tbody>
             </table>
         </div>
 
@@ -52,19 +57,13 @@
             <div class="card-body">
                 <h5 class="card-title">Find Your Beer Here!</h5>
                 <p class="card-text">Search for specific styles of beer based off where you are and surrounding areas.</p>
-                <div class="dropdown show">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Search Radius
-                    </a>
+                
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">5 Miles</a>
-                        <a class="dropdown-item" href="#">10 Miles</a>
-                        <a class="dropdown-item" href="#">25 Miles</a>
-                    </div>
+                   
+                        <input class="display" class="form-control" id="beer-search" type="text" placeholder="search..." />
+                        <button class="btn btn-info" id="beer-search-btn">Submit</button>
+                    
                 </div>
-            </div>
         </div>
 
 
