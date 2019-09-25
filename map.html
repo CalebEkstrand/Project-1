@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Find A Brewery</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script
@@ -21,17 +20,9 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 
     <title>Find Brewery</title>
 </head>
-
-    <body>
-
-        <h1 class="title">
-            <bold>Find A Brewery</bold>
-        </h1>
-
 <body id="brew-body">
      <div class="wrapper">
         <nav class="tabs">
@@ -70,14 +61,10 @@
     <audio autoplay>
             <source id="my_audio" src="images/barNoise.mp3" type="audio/mpeg" loop="loop">
     </audio>
-    <iframe
-    width="300"
-    height="200"
-    frameborder="35" style="border:0"
-    src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&q=brewery" allowfullscreen>
-  </iframe>
     <div id="map"></div>  
         <script rel="javascript" type="text/javascript" src="app.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"></script>
     </body>
 
 </html>
