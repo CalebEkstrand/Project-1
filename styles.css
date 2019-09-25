@@ -131,11 +131,6 @@ h6{
         margin-top: 100px;
 }
 
-.dropdown-menu:hover {
-    color: #fff;
-    background-color: lightgray;
-}
-
 .searchCard {
     float: right;
     color: #fff;
