@@ -104,55 +104,55 @@ $("#btn").on("click", function (event) {
 
 
 
-    // var searchBox = new google.map.places.SearchBox(input);
-    // var places = searchBox.getPlaces();
-    // var input = document.getElementById("search");
+    var searchBox = new google.map.places.SearchBox(input);
+    var places = searchBox.getPlaces();
+    var input = document.getElementById("search");
 
-    // map.addListener("bounds_changed", function () {
-    //     searchBox.setBounds(map.getBounds());
-    // });
+    map.addListener("bounds_changed", function () {
+        searchBox.setBounds(map.getBounds());
+    });
 
-    // var markers = [];
-    // searchBox.addListener("places_changed", function () {
-    //     var places = searchBox.getPlaces();
-    //     var input = document.getElementById("search");
-    //     var searchBox = new google.map.places.SearchBox(input);
+    var markers = [];
+    searchBox.addListener("places_changed", function () {
+        var places = searchBox.getPlaces();
+        var input = document.getElementById("search");
+        var searchBox = new google.map.places.SearchBox(input);
 
-    //     map.addListener("bounds_changed", function () {
-    //         searchBox.setBounds(map.getBounds());
-    //     });
+        map.addListener("bounds_changed", function () {
+            searchBox.setBounds(map.getBounds());
+        });
 
-    //     var markers = [];
-    //     searchBox.addListener("places_changed", function () {
-    //         var places = searchBox.getPlaces();
+        var markers = [];
+        searchBox.addListener("places_changed", function () {
+            var places = searchBox.getPlaces();
 
-    //         if (places.length = 0)
-    //             return;
+            if (places.length = 0)
+                return;
 
-    //         markers.forEach(function (m) { m.setMap(null); });
-    //         markers = [];
+            markers.forEach(function (m) { m.setMap(null); });
+            markers = [];
 
-    //         var bounds = new google.maps.LatLngBounds();
-    //         places.forEach(function (p) {
-    //             if (!p.geometry)
-    //                 return;
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function (p) {
+                if (!p.geometry)
+                    return;
 
-    //             markers.push(new google.maps.Marker({
-    //                 map: map,
-    //                 title: p.name,
-    //                 position: p.geometry.location
-    //             }));
+                markers.push(new google.maps.Marker({
+                    map: map,
+                    title: p.name,
+                    position: p.geometry.location
+                }));
 
-    //             if (p.geometry.viewport)
-    //                 bounds.union(p.geometry.viewport);
-    //             else
-    //                 bounds.extend(p.geometry.location);
-    //         });
-    //         map.fitBounds(bounds);
+                if (p.geometry.viewport)
+                    bounds.union(p.geometry.viewport);
+                else
+                    bounds.extend(p.geometry.location);
+            });
+            map.fitBounds(bounds);
 
 
-    //     });
-    // });
+        });
+    });
 });
 
 
@@ -216,18 +216,23 @@ $(".tabs").on("click", "a", function (e) {
 
 // createMap()
 
-
-$("#brew-type-loc").on("click", function (event) {
-    event.preventDefault();
-    var brewLoc = ("http://api.brewerydb.com/v2/" + endpoint + "/?key=94780a63bf05dcb19f858d5285c41fbb");
-
+// $("#brew-type-loc").on("click", function(event){
+//     event.preventDefault();
+//     var brewLoc = ("http://api.brewerydb.com/v2/" + endpoint + "/?key=94780a63bf05dcb19f858d5285c41fbb");
 
 
 
-    $.ajax({
-        url: brewLoc,
-        method: "GET"
-    }).then(function (response) {
-    })
-    console.log("Click")
-})
+//     $.ajax({
+//         url: brewLoc,
+//         method: "GET"
+//     }).then(function(response){
+//     })
+//     console.log("Click")})}
+
+// $.ajax({
+//     url: brewLoc,
+//     method: "GET"
+// }).then(function (response) {
+// })
+// console.log("Click")
+
