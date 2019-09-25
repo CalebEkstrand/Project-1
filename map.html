@@ -17,48 +17,61 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <link rel='stylesheet' type='text/css' href='styles.css' />
-    
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+
+    <title>Find Brewery</title>
 </head>
 
 <body id="map">
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="brewery.html">Beer Style</a>
+        <a class="navbar-brand" href="location_type.html">Brewery Type</a>
+    </nav>
+
+    <body>
 
         <h1 class="title">
             <bold>Find A Brewery</bold>
         </h1>
-        
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand">Navbar</a>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
-        
-        <div class="row">
+         <!-- <p>Include this as a paragraph to the left in a box</p>
 
-            <div class="side-p col-md-2">
-                <!-- <h5 class="spanc"> -->
-                    Include this as a paragraph to the left in a box
-                    <!-- </h5> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display">My Map</h1>
                 </div>
             </div>
-                
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            <div class="row mb-2">
+                <div class="col">
+                    <input class="form-control" id="search" type="text" placeholder="search..." />
+                    <button class="btn btn-info" id="btn">Submit</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
         </div>
-            
-            <script rel="javascript" type="text/javascript" src="app.js"></script>
-            <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68"
-            async defer></script>
-        </body>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"></script>
+       -->
+
+            <iframe
+            width="300"
+            height="200"
+            frameborder="35" style="border:0"
+            src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&q=brewery" allowfullscreen>
+          </iframe>
+
+
+
+
+
+        <script rel="javascript" type="text/javascript" src="app.js"></script>
+    </body>
 
 </html>
