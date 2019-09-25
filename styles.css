@@ -140,13 +140,28 @@ h6{
 /* MAP PAGE CSS */
 
 #map {
-    height: 80%;
-    width: 40%;
+    height: 100%;
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 100px;
+    border: solid;
+    border-color: black;
   }
 
 .display {
-width: 30%;
+width: 60%;
 color: black;
+}
+
+#beer-search-btn {
+    background-color: #777;
+    border-color: darkgray;
+    height: 30px;
+    text-align: center;
+}
+
+#map-search {
+    margin-top: 185px;
 }
 
 
