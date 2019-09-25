@@ -57,14 +57,11 @@ function handleLocationError(content, position) {
 
 // var database = firebase.database();
 
-<<<<<<< HEAD
 // var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 var queryURLbrewery = `https://cors-anywhere.herokuapp.com//https://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb`
 
 jQuery.ajaxPrefilter(function(options) {
-=======
 var queryURL = "http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
->>>>>>> bef02974ba1201140a2e01e688aa7d41f9a271f4
 
 function brewLoc() {
     var locations = [
