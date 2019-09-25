@@ -70,12 +70,11 @@ $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
     var brewerySearch = $("#search").val().trim();
-    var queryURL = 
+    var queryURL = `http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap&q=${brewerySearch}` //add url for google api here, you can use a template literal to include your brewerySearch in the URL 
     console.log(brewerySearch)
-    //Grabbing user input values
-    // var container = document.getElementById("search");
+    
     $.ajax({
-        url: brewerySearch,
+        url: queryURL,
         method: "GET"
     }).then(function (response) {
        var data = response.data;
