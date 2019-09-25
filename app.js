@@ -1,5 +1,7 @@
+var locality = `/locations`;
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
-var queryURLbrewery = `https://api.brewerydb.com/v2/${endpoint}/?key=94780a63bf05dcb19f858d5285c41fbb`
+var queryURLbrewery = `http://api.brewerydb.com/v2/${locality}/?key=94780a63bf05dcb19f858d5285c41fbb`
+console.log(queryURLbrewery)
 var firebaseConfig = {
     apiKey: "AIzaSyAPPCVJIU212WdBYfANzZW1NJnpAA1NNMk",
     authDomain: "beertastic-e3433.firebaseapp.com",
@@ -16,7 +18,6 @@ var database = firebase.database();
 
 var breweryTypeLoc = `/brewery/:breweryId/locations`;
 var beerByBrewery = `/beer/:beerId/breweries`;
-var locality = `/locations`;
 var endpoint = "brewery/:breweryId/locations";
 var map;
 function createMap() {
@@ -59,9 +60,29 @@ var queryURLbrewery = `https://cors-anywhere.herokuapp.com//https://api.breweryd
 
 jQuery.ajaxPrefilter(function(options) {
 
+function brewLoc(){
+var locations = [
+    data.longitude ,  ""
+]}
+
 $("#btn").on("click", function (event) {
     event.preventDefault();
     console.log("we clicked it")
+<<<<<<< HEAD
+=======
+    //Grabbing user input values
+// var container = document.getElementById("search");
+    $.ajax({
+        URL: queryURLbrewery,
+        method: "GET"
+    }).then(function(response) {
+brewLoc(response);
+console.log(response)
+=======
+    }).then(function (response) {
+    })
+
+>>>>>>> 371392fb3a5a8e7aff6ad9db7efbb2d979e7f779
 
 
     $.ajax({
@@ -115,15 +136,43 @@ $("#btn").on("click", function (event) {
             
         });
     });
+<<<<<<< HEAD
         
 // window.onload = function() {
 //     document.getElementById("#my_audio").play();
 //  }
+=======
+});
+>>>>>>> 371392fb3a5a8e7aff6ad9db7efbb2d979e7f779
 
-//  $(document).ready(function() {
-//     $("#my_audio").get(0).play();
-//  });
-//     //  createMap()
+
+var tabs = $('.tabs');
+var selector = $('.tabs').find('a').length;
+var selector = $(".tabs").find(".selector");
+var activeItem = tabs.find('.active');
+var activeWidth = activeItem.innerWidth();
+$(".selector").css({
+  "left": activeItem.position.left + "px", 
+  "width": activeWidth + "px"
+});
+
+$(".tabs").on("click","a",function(e){
+  e.preventDefault();
+  $('.tabs a').removeClass("active");
+  $(this).addClass('active');
+  var activeWidth = $(this).innerWidth();
+  var itemPos = $(this).position();
+  $(".selector").css({
+    "left":itemPos.left + "px", 
+    "width": activeWidth + "px"
+  });
+  var href = $(this).attr("data-href");
+  setTimeout(function(){ 
+      window.location.href = href;
+
+  },500);
+});
+
 
 
 // $("#brew-type-loc").on("click", function(event){
@@ -137,4 +186,9 @@ $("#btn").on("click", function (event) {
 //         method: "GET"
 //     }).then(function(response){
 //     })
+<<<<<<< HEAD
 //     console.log("Click"
+=======
+//     console.log("Click")})}
+
+>>>>>>> 371392fb3a5a8e7aff6ad9db7efbb2d979e7f779
