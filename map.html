@@ -7,22 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<<<<<<< HEAD
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script> -->
+=======
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+>>>>>>> f21cff06e23a0b419caadce9fcf3f50b5d3e6721
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <link type="text/css" rel="stylesheet" href="styles.css">
-
     <title>Find Brewery</title>
+   
 </head>
+
 <body id="brew-body">
-     <div class="wrapper">
+    <div class="wrapper">
         <nav class="tabs">
+          
             <div class="selector"></div>
             <a data-href="index.html" href="#"><i class="fas fa-hand-rock"></i>Home</a>
             <a data-href="brewery.html" href="#"><i class="fas fa-bolt"></i>Brewery Type</a>
@@ -30,34 +37,21 @@
         </nav>
     </div>
 
-<body>
-    
-    <h1 class="title">
-        <bold>Find A Brewery</bold>
-    </h1>
-    <p>Include this as a paragraph to the left in a box</p>
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1 class="display">My Map</h1>
-            </div>    
-        </div>    
-        <div class="row mb-2">
-            <div class="col">
-                <input class="display" class="form-control" id="search" type="text" placeholder="search..." />
-                <button class="btn btn-info" id="btn">Submit</button>
-            </div> 
-            <!-- <button class="btn btn-info" id="test-button">Submit</button> -->
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="mapDiv"></div>
+   
+        <div id="map-search1" class="searchCard" class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    
+                   
+                </div>
+            </div>   
         </div>    
         <div class="row">
             <div class="col">
-                    <iframe
-                    width="300"
-                    height="200"
-                    frameborder="35" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&q=brewery" allowfullscreen>
-                  </iframe>
+           
+                    <!-- <iframe id="map" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&q=brewery" allowfullscreen>
+                  </iframe> -->
             </div>    
         </div>    
     </div>  
@@ -67,8 +61,11 @@
     </audio>
     
         <script rel="javascript" type="text/javascript" src="app.js"></script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"></script>
+      
+        <!-- <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"></script> -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&libraries=places&callback=initAutocomplete"
+            async defer></script>
     </body>
 
 </html>
