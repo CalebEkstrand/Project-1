@@ -24,7 +24,8 @@ body {
     position: relative;
     right: 10px;
     display: inline-block;
-    color:antiquewhite;
+    color: black;
+    font-family: chalkduster ,fantasy;
 }
 
 .pTwo {
@@ -36,7 +37,8 @@ body {
     position: relative;
     right: 5px;
     display: inline-block;
-    color:antiquewhite;
+    color: black;
+    font-family: chalkduster ,fantasy;
 }
 
 #images {
@@ -66,8 +68,8 @@ body {
     top: -55px;
     position: relative;
     height: 100px;
-    width: 45px;
-    margin-left: 33px;
+    width: 40px;
+    margin-left: 36px;
 }
 
 
@@ -169,38 +171,11 @@ h6{
 
 /* MAP PAGE CSS */
 
-#map {
-    height: 150%;
-    width: 60%;
-    margin-left: 30px;
-    margin-top: 100px;
-    border: solid;
-    border-color: black;
-  }
-
-.display {
-width: 60%;
-color: black;
-}
-
-#beer-search-btn {
-    background-color: #777;
-    border-color: black;
-    height: 32px;
-    text-align: center;
-}
-
-#map-search {
-    right: 130px;
-    color: #fff;
-    position: fixed;
-    overflow: hidden;
-    top: 300px;
-}
-
-
 #mapDiv {
-  height: 100%;
+  height: 90%;
+  width: 60%;
+  margin-left: 280px;
+  margin-top: 80px;
 }
 
 #description {
@@ -237,11 +212,6 @@ color: black;
   margin-right: 12px;
 }
 
-.pac-controls {
-  display: inline-block;
-  padding: 5px 11px;
-}
-
 .pac-controls label {
   font-family: Roboto;
   font-size: 13px;
@@ -257,19 +227,11 @@ color: black;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 400px;
+  height: 35px;
+  margin-top: 5px;
 }
 
 #pac-input:focus {
-  border-color: #4d90fe;
+  border-color: red;
 }
 
-#title {
-  color: #fff;
-  background-color: #4d90fe;
-  font-size: 25px;
-  font-weight: 500;
-  padding: 6px 12px;
-}
-#target {
-  width: 345px;
-}
