@@ -1,3 +1,5 @@
+var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`;
+
 // var locality = `/locations`;
 
 // var queryURLgoogle = `https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap`
@@ -63,43 +65,33 @@ var queryURLbrewery = `https://cors-anywhere.herokuapp.com/https://api.brewerydb
 // jQuery.ajaxPrefilter(function(options) {
 var queryURL = "http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 
-function brewLoc() {
-    var locations = [
-        data.longitude, ""
-    ]
-}
-$("#test-button").on("click", function (event) {
-    event.preventDefault();
-    console.log("Test to click");
-    var searchTerm = "Boulder, Colorado";
-    //Using hard coded earch term, work with brewery api
-    //when we return search results, loop through and put one push pin on the map for each return result 
-    //recenter the map, output push pins
-})
+// function brewLoc() {
+//     var locations = [
+//         data.longitude, ""
+//     ]
+// }
+
 $("#btn").on("click", function (event) {
+    
     event.preventDefault();
     console.log("we clicked it")
 
     var brewerySearch = $("#search").val().trim();
+    var queryURL = 
     console.log(brewerySearch)
     //Grabbing user input values
     // var container = document.getElementById("search");
     $.ajax({
-        url: queryURL,
+        url: brewerySearch,
         method: "GET"
     }).then(function (response) {
-        var data = response.data;
-        for (var i = 0; i < data.length; i++) {
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Hello World!'
-            });
+       var data = response.data;
+       for (var i = 0; i < data.length; i++){
+        
+          };
 
 
-        }
-        console.log(r)
-    })
+       })
 
 
 
