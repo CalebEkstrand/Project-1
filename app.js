@@ -124,15 +124,20 @@ function initAutocomplete() {
     });
 }
 
-var queryURL = "http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
+// var queryURL = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
+var queryURLbrewery = `https://cors-anywhere.herokuapp.com/https://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb`
+
+// jQuery.ajaxPrefilter(function(options) {
+var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=39.74,-104.99&radius=10000&type=brewery&keyword=brewery&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"
 
 
 $("#btn").on("click", function (event) {
 
     event.preventDefault();
     console.log("we clicked it")
+
     var brewerySearch = $("#search").val().trim();
-    var queryURL = `http://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap&q=${brewerySearch}` //add url for google api here, you can use a template literal to include your brewerySearch in the URL 
+    var queryURL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/js?key=yBJAJ69BYp6PCX2ZGwMh4_fJGVxRF6lW68&callback=initMap&q=${brewerySearch}` //add url for google api here, you can use a template literal to include your brewerySearch in the URL 
     console.log(brewerySearch)
 
     // $.ajax({
@@ -269,7 +274,7 @@ $("#beer-search-btn").on("click", function () {
     // var brewMapQueryUrl = `http://cors-anywhere.herokuapp.com/http://beermapping.com/webservice/loccity/1e85b90225089a51575fe3432c04261e/${beerSearch}`
 
 
-    var queryURLbrewery = `http://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb&locality=${beerSearch}`
+    var queryURLbrewery = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/locations/?key=94780a63bf05dcb19f858d5285c41fbb&locality=${beerSearch}`
     $.ajax({
         url: queryURLbrewery,
         method: "GET"
@@ -319,6 +324,7 @@ $(".tabs").on("click", "a", function (e) {
 });
 
 
+// createMap()
 
 // $("#brew-type-loc").on("click", function(event){
 //     event.preventDefault();
