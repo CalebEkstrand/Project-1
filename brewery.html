@@ -11,55 +11,54 @@
 
 <link type="text/css" rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script
-src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-crossorigin="anonymous"></script>
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
 </head>
 
 
 <body id="brew-body">
-        <div class="wrapper">
-            <nav class="tabs">
-                <div class="selector"></div>
-                <a data-href="index.html" href="#"><i class="fas fa-hand-rock"></i>Home</a>
-                <a data-href="brewery.html" href="#"><i class="fas fa-bolt"></i>Brewery Type</a>
-                <a data-href="map.html" href="#"><i class="fas fa-burn"></i>Map</a>
-                </nav>
-        </div>
+    <div class="wrapper">
+        <nav class="tabs">
+            <div class="selector"></div>
+            <a data-href="index.html" href="#"><i class="fas fa-hand-rock"></i>Home</a>
+            <a data-href="brewery.html" href="#"><i class="fas fa-bolt"></i>Brewery Type</a>
+            <a data-href="map.html" href="#"><i class="fas fa-burn"></i>Map</a>
+        </nav>
+    </div>
 
-        <div class="card col-md-6">
-            <table class="table table-sm table-hover" id='beer-table'>
-                <thead>
-                    <tr>
-                        <th scope="col">Brewery Name</th>
-                        <th scope="col">Location</th>
-                        <th scope="col">Brewery Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-        </div>
+    <div class="card col-md-6">
+        <table class="table table-sm table-hover" id='beer-table'>
+            <thead>
+                <tr>
+                    <th scope="col">Brewery Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Brewery Type</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        <div class="searchCard" class="card text-center" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">Find Your Beer Here!</h5>
-                <p class="card-text">All the different types of Brewies in your area.</p>
-                        <input class="display" class="form-control" id="beer-search" type="text" placeholder="search..." />
-                        <button class="btn btn-info" id="beer-search-btn">Submit</button>
-                </div>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="searchCard" class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Find Your Beer Here!</h5>
+            <p class="card-text">All the different types of Brewies in your area.</p>
+            <input class="display" class="form-control" id="beer-search" type="text" placeholder="search..." />
+            <button class="btn btn-info" id="beer-search-btn">Submit</button>
         </div>
-        <script rel="javascript" type="text/javascript" src="app.js"></script>
-    </body>
+    </div>
+    <script rel="javascript" type="text/javascript" src="app.js"></script>
+</body>
+
 </html>
