@@ -16,13 +16,13 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <link type="text/css" rel="stylesheet" href="styles.css">
     <title>Find Brewery</title>
-   
+
 </head>
 
 <body id="brew-body">
     <div class="wrapper">
         <nav class="tabs">
-          
+
             <div class="selector"></div>
             <a data-href="index.html" href="#"><i class="fas fa-hand-rock"></i>Home</a>
             <a data-href="brewery.html" href="#"><i class="fas fa-bolt"></i>Brewery Type</a>
@@ -32,33 +32,15 @@
 
     <input id="pac-input" class="controls" type="text" placeholder="Search Box">
     <div id="mapDiv"></div>
-   
-        <div id="map-search1" class="searchCard" class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                    
-                   
-                </div>
-            </div>   
-        </div>    
-        <div class="row">
-            <div class="col">
-           
-                    <!-- <iframe id="map" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&q=brewery" allowfullscreen>
-                  </iframe> -->
-            </div>    
-        </div>    
-    </div>  
-    
-    <audio autoplay>
-            <source id="my_audio" src="images/barNoise.mp3" type="audio/mpeg" loop="loop">
-    </audio>
-    
-        <script rel="javascript" type="text/javascript" src="app.js"></script>
-      
-        <!-- <script async defer
-            src="https://maps.googleapis.com/maps/api/js?callback=createMap&key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk"></script> -->
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&libraries=places&callback=initAutocomplete"
-            async defer></script>
-    </body>
+
+    <div id="map-search1" class="searchCard" class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+        </div>
+    </div>
+    <script rel="javascript" type="text/javascript" src="app.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgljKDqtkkeWptCTwsKeNTk3nZ1A3PJPk&libraries=places&callback=initAutocomplete"
+        async defer></script>
+</body>
 
 </html>
