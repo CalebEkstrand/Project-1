@@ -24,7 +24,8 @@ body {
     position: relative;
     right: 10px;
     display: inline-block;
-    color:antiquewhite;
+    color: black;
+    font-family: chalkduster ,fantasy;
 }
 
 .pTwo {
@@ -36,7 +37,8 @@ body {
     position: relative;
     right: 5px;
     display: inline-block;
-    color:antiquewhite;
+    color: black;
+    font-family: chalkduster ,fantasy;
 }
 
 #images {
@@ -66,8 +68,8 @@ body {
     top: -55px;
     position: relative;
     height: 100px;
-    width: 45px;
-    margin-left: 33px;
+    width: 40px;
+    margin-left: 36px;
 }
 
 
