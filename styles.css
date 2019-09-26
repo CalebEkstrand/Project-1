@@ -15,7 +15,7 @@ body {
     margin-left: 255px;
 } 
 
-.pTwo{
+.pOne{
     margin-left: 17px;
     top: 18px;
     width: 95px;
@@ -27,7 +27,7 @@ body {
     color:antiquewhite;
 }
 
-.pOne {
+.pTwo {
     margin-left: 12px;
     top: 17px;
     width: 95px;
@@ -58,8 +58,8 @@ body {
     position: absolute;
     height: 250px;
     width: 600px;
-    top: 195px;
-    margin-left: 500px;
+    top: 215px;
+    margin-left: 600px;
 }
 
 .caps {
@@ -69,6 +69,7 @@ body {
     width: 45px;
     margin-left: 33px;
 }
+
 
 .audio {
     visibility: collapse;
@@ -161,7 +162,7 @@ h6{
     color: #fff;
     position: fixed;
     overflow: hidden;
-    top: 200px;
+    top: 250px;
 }
 
 
